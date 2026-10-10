@@ -1,7 +1,7 @@
 # Need to Know: Contextual-Integrity-Grounded Query Rewriting for Privacy-Conscious LLM Delegation
 
 [![arXiv](https://img.shields.io/badge/arXiv-TODO-b31b1b.svg)](https://arxiv.org/abs/TODO)
-[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-DelegateCI--Bench-yellow)](https://huggingface.co/datasets/TODO/DelegateCI-Bench)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-DelegateCI--Bench-yellow)](https://huggingface.co/datasets/bellaXY/DelegateCI)
 
 Official training code for our EMNLP 2026 paper **"Need to Know: Contextual-Integrity-Grounded Query Rewriting for Privacy-Conscious LLM Delegation"**.
 
@@ -10,7 +10,7 @@ task-essential span and drops sensitive spans the task does not need. The reward
 a hard privacy term, a concave essential-preservation term and a one-sided length penalty
 (Sec. 3 of the paper). The code is built on [verl](https://github.com/volcengine/verl).
 
-The benchmark, **DelegateCI-Bench**, is released on [Hugging Face Datasets](https://huggingface.co/datasets/TODO/DelegateCI-Bench).
+The benchmark, **DelegateCI-Bench**, is released on [Hugging Face Datasets](https://huggingface.co/datasets/bellaXY/DelegateCI).
 
 ## Installation
 
