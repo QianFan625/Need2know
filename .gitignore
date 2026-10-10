@@ -2,7 +2,8 @@
 # Training artefacts (project-specific)
 logs/
 trajectory/
-data/
+data/*
+!data/med_priv_mix/
 swanlog/
 ray_tmp/
 *.log
@@ -133,3 +134,6 @@ logs
 log
 outputs
 .history
+
+# released training data
+!data/med_priv_mix/*.parquet

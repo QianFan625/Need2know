@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # GRPO training entrypoint for the CI-guided query rewriter.
 #   - 4 x A100 (80G), Qwen2.5-3B-Instruct, GRPO
-#   - dataset: DelegateCI-Bench (train split), see README for the parquet format
+#   - dataset: data/med_priv_mix (DelegateCI-Bench train split + 300-sample validation set)
 #
 # Configurable environment variables (all have sensible defaults):
 #   MODEL_PATH    : path or HuggingFace id of the base model
@@ -11,7 +11,7 @@
 #
 # Example:
 #   MODEL_PATH=Qwen/Qwen2.5-3B-Instruct \
-#   DATA_DIR=./data/delegateci \
+#   DATA_DIR=./data/med_priv_mix \
 #   bash examples/grpo_trainer/run_qwen2_5-3b_delegateci.sh
 
 set -x
@@ -23,7 +23,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="${PROJECT_ROOT:-$(cd "${SCRIPT_DIR}/../.." && pwd)}"
 
 MODEL_PATH=${MODEL_PATH:-Qwen/Qwen2.5-3B-Instruct}
-DATA_DIR=${DATA_DIR:-${PROJECT_ROOT}/data/delegateci}
+DATA_DIR=${DATA_DIR:-${PROJECT_ROOT}/data/med_priv_mix}
 REWARD_FN=${REWARD_FN:-${PROJECT_ROOT}/verl/utils/reward_score/priv_batch.py}
 
 mkdir -p logs trajectory
