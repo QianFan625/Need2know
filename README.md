@@ -6,9 +6,7 @@
 Official training code for our EMNLP 2026 paper **"Need to Know: Contextual-Integrity-Grounded Query Rewriting for Privacy-Conscious LLM Delegation"**.
 
 We train a query rewriter with GRPO so that a user query sent to a remote LLM keeps every
-task-essential span and drops sensitive spans the task does not need. The reward combines
-a hard privacy term, a concave essential-preservation term and a one-sided length penalty
-(Sec. 3 of the paper). The code is built on [verl](https://github.com/volcengine/verl).
+task-essential span and drops sensitive spans the task does not need. The code is built on [verl](https://github.com/volcengine/verl).
 
 The benchmark, **DelegateCI-Bench**, is released on [Hugging Face Datasets](https://huggingface.co/datasets/Qianfan625/DelegateCI).
 
@@ -47,11 +45,3 @@ bash examples/grpo_trainer/run_qwen2_5-3b_delegateci.sh
   year      = {2026}
 }
 ```
-
-## Acknowledgements
-
-This repository is built on [verl](https://github.com/volcengine/verl). We thank its authors.
-
-## License
-
-Apache-2.0, following verl.
